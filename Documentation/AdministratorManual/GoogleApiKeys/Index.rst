@@ -41,7 +41,7 @@ Google Cloud Platform
     Else you have to create new billing information first.
 
     .. important::
-        Google needs these billing information to be sure, that you're not a robot. That's not a joke, that's google.
+        Google needs these billing information to be sure, that you're not a robot. That's not a joke, that's Google.
 
 #.  After assigning your billing information to your project, you will get the information that some
     APIs have automatically activated for your project.
