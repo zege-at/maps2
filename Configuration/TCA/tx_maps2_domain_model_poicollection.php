@@ -241,7 +241,7 @@ return [
             'config' => [
                 'type' => 'input',
                 'renderType' => 'maps2ReadOnly',
-                'size' => 30,
+                'size' => 50,
                 'readOnly' => true,
                 'placeholder' => 'LLL:EXT:maps2/Resources/Private/Language/locallang_db.xml:tx_maps2_domain_model_poicollection.address.useSearchField',
                 'eval' => 'required,trim',

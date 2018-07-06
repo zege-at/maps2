@@ -62,10 +62,10 @@
         <source>Map</source>
       </trans-unit>
       <trans-unit id="tx_maps2_domain_model_poicollection.address" xml:space="preserve" approved="yes">
-        <source>address</source>
+        <source>Address. Will be filled automatically after an address search</source>
       </trans-unit>
       <trans-unit id="tx_maps2_domain_model_poicollection.configuration_map" xml:space="preserve" approved="yes">
-        <source>Configure position on Google Maps</source>
+        <source>Map. Please use input field on map to search for addresses</source>
       </trans-unit>
       <trans-unit id="tx_maps2_domain_model_poicollection.latitude" xml:space="preserve">
         <source>Latitude for map position</source>

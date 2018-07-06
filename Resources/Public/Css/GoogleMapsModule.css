@@ -1,7 +1,7 @@
 .controls {
     background-color: #fff;
     border-radius: 2px;
-    border: 1px solid transparent;
+    border: 3px solid #000842;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
     font-family: Roboto, Verdana, sans-serif;
@@ -13,7 +13,7 @@
     outline: none;
     padding: 0 11px 0 13px;
     text-overflow: ellipsis;
-    width: 400px;
+    width: 70%;
 }
 
 .controls:focus {

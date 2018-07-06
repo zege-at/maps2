@@ -80,12 +80,12 @@
         <target>Karte</target>
       </trans-unit>
       <trans-unit id="tx_maps2_domain_model_poicollection.address" xml:space="preserve" approved="yes">
-        <source>address</source>
-        <target>Adresse</target>
+        <source>Address. Will be filled automatically after an address search</source>
+        <target>Adresse. Wird nach dem Start einer Adresssuche automatisch befüllt</target>
       </trans-unit>
       <trans-unit id="tx_maps2_domain_model_poicollection.configuration_map" xml:space="preserve" approved="yes">
-        <source>Configure position on Google Maps</source>
-        <target>Konfiguration einer Position auf Google Maps</target>
+        <source>Map. Please use input field on map to search for addresses</source>
+        <target>Karte. Bitte verwendet das Eingabefeld auf der Karte, um nach Adressen zu suchen</target>
       </trans-unit>
       <trans-unit id="tx_maps2_domain_model_poicollection.latitude" xml:space="preserve">
         <source>Latitude for map position</source>
