@@ -307,22 +307,23 @@ Maps2.prototype.createMarker = function(poiCollection, environment) {
   var categoryUid = "0";
   var marker = new google.maps.Marker({
     position: new google.maps.LatLng(poiCollection.latitude, poiCollection.longitude),
-    map: this.map
+    map: this.map,
+    draggable: this.editable
   });
-  marker.setDraggable(this.editable);
+  // add icon of PoiCollection. If not found: try icon of sys_category
+  if (poiCollection.markerIcon !== "") {
+    var icon = {
+      url: poiCollection.markerIcon,
+      scaledSize: new google.maps.Size(poiCollection.markerIconWidth, poiCollection.markerIconHeight),
+      anchor: new google.maps.Point(poiCollection.markerIconAnchorPosX, poiCollection.markerIconAnchorPosY)
+    };
+    marker.setIcon(icon);
+  }
+
   for (var i = 0; i < poiCollection.categories.length; i++) {
     categoryUid = poiCollection.categories[i].uid;
     if (!this.categorizedMarkers.hasOwnProperty(categoryUid)) {
       this.categorizedMarkers[categoryUid] = [];
-    }
-    // assign first found marker icon, if available
-    if (poiCollection.markerIcon !== "") {
-      var icon = {
-        url: poiCollection.markerIcon,
-        scaledSize: new google.maps.Size(poiCollection.markerIconWidth, poiCollection.markerIconHeight),
-        anchor: new google.maps.Point(poiCollection.markerIconAnchorPosX, poiCollection.markerIconAnchorPosY)
-      };
-      marker.setIcon(icon);
     }
     this.categorizedMarkers[categoryUid].push(marker);
     this.pointMarkers.push(marker);
