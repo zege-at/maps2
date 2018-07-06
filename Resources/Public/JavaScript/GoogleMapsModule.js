@@ -395,6 +395,10 @@ define("TYPO3/CMS/Maps2/GoogleMapsModule", ["jquery", "gmaps"], function($, gmap
               //marker.setPlace(); // setPlace works, but it resets previous marker settings like draggable, ...
               marker.setPosition(results[0].geometry.location);
               marker.setVisible(true);
+              infoWindowContent.children["place-name"].textContent = place.name;
+              infoWindowContent.children["place-id"].textContent = place.place_id;
+              infoWindowContent.children["place-address"].textContent = results[0].formatted_address;
+              infoWindow.open(map, marker);
               setLatLngFields(lat, lng, 0, results[0].formatted_address);
               break;
             case 'Area':
@@ -411,10 +415,6 @@ define("TYPO3/CMS/Maps2/GoogleMapsModule", ["jquery", "gmaps"], function($, gmap
           }
 
           map.setCenter(results[0].geometry.location);
-          infoWindowContent.children["place-name"].textContent = place.name;
-          infoWindowContent.children["place-id"].textContent = place.place_id;
-          infoWindowContent.children["place-address"].textContent = results[0].formatted_address;
-          infoWindow.open(map, marker);
         });
       });
     };
